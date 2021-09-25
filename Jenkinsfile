@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('clone') {
             steps {
-                git clone https://github.com/spring-projects/spring-petclinic.git
+                bat "git clone https://github.com/spring-projects/spring-petclinic.git"
             }
         }
     }
