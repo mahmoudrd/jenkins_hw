@@ -7,12 +7,11 @@ pipeline {
                 bat "git clone https://github.com/spring-projects/spring-petclinic.git"
             }
         }
-    
-    
-   
         stage('cd') {
             steps {
-               cd spring-petclinic
+                script{
+                   "cd spring-petclinic"
+                }
             }
         }
     
@@ -24,7 +23,7 @@ pipeline {
                 }
             }
         }
-   
+    }
 }
 
 
