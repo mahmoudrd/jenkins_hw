@@ -1,5 +1,5 @@
 pipeline {
-    agent "slave"
+    agent 'slave';
 
     stages {
         stage('clone') {
@@ -7,7 +7,7 @@ pipeline {
                 bat "git clone https://github.com/spring-projects/spring-petclinic.git"
             }
         }
-    }
+    
     
    
         stage('cd') {
