@@ -1,5 +1,5 @@
 pipeline {
-    agent slave
+    agent "slave"
 
     stages {
         stage('clone') {
@@ -9,14 +9,14 @@ pipeline {
         }
     }
     
-    stages {
+   
         stage('cd') {
             steps {
                cd spring-petclinic
             }
         }
-    }
-    stages {
+    
+    
         stage('dwonload') {
             steps {
                 script{
@@ -24,7 +24,7 @@ pipeline {
                 }
             }
         }
-    }
+   
 }
 
 
