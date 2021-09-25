@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent {slave}
 
     stages {
         stage('clone') {
@@ -18,7 +18,7 @@ pipeline {
         }
     
     
-        stage('dwonload') {
+        stage('download') {
             steps {
                 script{
                    "./mvnw package"
