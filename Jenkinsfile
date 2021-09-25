@@ -19,7 +19,9 @@ pipeline {
     stages {
         stage('dwonload') {
             steps {
-              ./mvnw package
+                script{
+                   "./mvnw package"
+                }
             }
         }
     }
